@@ -7,6 +7,7 @@ module.exports = {
     title: "Felix's Blog",
     description: '记录工作、学习与生活',
     port: 8081,
+    base:'/blog/',
     head,
     plugins,
     themeConfig,
