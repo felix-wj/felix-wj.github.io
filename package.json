@@ -1,0 +1,39 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "个人博客",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "build": "vuepress build docs"
+  },
+  "author": "felix",
+  "license": "ISC",
+  "devDependencies": {
+    "async-validator": "1.12.2",
+    "dayjs": "1.10.7",
+    "element-ui": "2.15.6",
+    "gh-pages": "^5.0.0",
+    "inquirer": "8.2.0",
+    "json2yaml": "^1.1.0",
+    "markdown-it-replace-link": "1.1.0",
+    "vue": "2.6.14",
+    "vue-resource": "1.5.3",
+    "vuepress": "1.9.4",
+    "vuepress-plugin-baidu-autopush": "1.0.1",
+    "vuepress-plugin-baidu-tongji": "1.0.1",
+    "vuepress-plugin-comment": "^0.7.3",
+    "vuepress-plugin-demo-block": "0.7.2",
+    "vuepress-plugin-demo-container": "0.2.0",
+    "vuepress-plugin-medium-zoom": "^1.1.9",
+    "vuepress-plugin-one-click-copy": "1.0.6",
+    "vuepress-plugin-thirdparty-search": "1.0.2",
+    "vuepress-plugin-zooming": "1.1.8",
+    "vuepress-theme-vdoing": "1.8.6",
+    "vuepress-theme-vue": "1.1.1",
+    "yamljs": "0.3.0"
+  }
+}
