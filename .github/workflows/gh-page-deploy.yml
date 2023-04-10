@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build VuePress site
-        run: yarn && yarn docs:build
+      run: yarn && yarn docs:build
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
