@@ -10,11 +10,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: Build and Deploy
-      uses: jenkey2011/vuepress-deploy@master
-      env:
+    - name: Build VuePress site
+        run: yarn && yarn docs:build
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_REPO: felix-wj/blog
-        TARGET_BRANCH: gh-pages
-        BUILD_SCRIPT: yarn && yarn build
-        BUILD_DIR: docs/.vuepress/dist/
+        # 部署到 gh-pages 分支
+        BRANCH: gh-pages
+        # 部署目录为 VuePress 的默认输出目录
+        FOLDER: docs/.vuepress/dist
