@@ -20,7 +20,7 @@ module.exports = {
             md.use(require(`markdown-it-replace-link`), {
                 replaceLink: function (link, env) {
                     if (link.toString().startsWith('urlPrefix')) {
-                        return link.replace('urlPrefix', 'https://blog.edwsmycs.cn')
+                        return link.replace('urlPrefix', 'https://felix-wj.github.io/')
                     } else {
                         return link.toString()
                     }
