@@ -17,6 +17,7 @@ module.exports = [
       { text: 'Git Tips', link: 'https://wangchujiang.com/git-tips/' },
       { text: '淘宝领券工具', link: '/tbk/' },
       { text: 'Markdown语法指南', link: 'https://www.markdown.xyz/basic-syntax/' },
+      { text: 'GitHub Emoji Picker', link: 'https://github-emoji-picker.rickstaa.dev/' },
 
     ]
   },
