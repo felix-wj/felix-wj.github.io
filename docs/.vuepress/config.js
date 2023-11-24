@@ -27,6 +27,7 @@ module.exports = {
 
                 }
             })
+            md.use(require('markdown-it-texmath'))
         }
     },
     devServer: {

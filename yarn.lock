@@ -3034,6 +3034,11 @@
   "resolved" "https://registry.npmmirror.com/commander/download/commander-2.20.3.tgz"
   "version" "2.20.3"
 
+"commander@^8.3.0":
+  "integrity" "sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww=="
+  "resolved" "https://registry.npmmirror.com/commander/-/commander-8.3.0.tgz"
+  "version" "8.3.0"
+
 "commander@~2.19.0":
   "integrity" "sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg=="
   "resolved" "https://registry.npmmirror.com/commander/download/commander-2.19.0.tgz"
@@ -6250,6 +6255,13 @@
     "json-schema" "0.2.3"
     "verror" "1.10.0"
 
+"katex@^0.16.9":
+  "integrity" "sha512-fsSYjWS0EEOwvy81j3vRA8TEAhQhKiqO+FQaKWp0m39qwOzHVBgAUBIXWj1pB+O2W3fIpNa6Y9KSKCVbfPhyAQ=="
+  "resolved" "https://registry.npmmirror.com/katex/-/katex-0.16.9.tgz"
+  "version" "0.16.9"
+  dependencies:
+    "commander" "^8.3.0"
+
 "keyv@^3.0.0":
   "integrity" "sha1-7MIoSG9pmR5J6UdkhaW+Ho/FxNk="
   "resolved" "https://registry.npmmirror.com/keyv/download/keyv-3.1.0.tgz"
@@ -6828,6 +6840,11 @@
   "integrity" "sha1-PcfOi4/BflmBx3zDmNF4Ixnzf7w="
   "resolved" "https://registry.npmmirror.com/markdown-it-table-of-contents/download/markdown-it-table-of-contents-0.4.4.tgz?cache=0&sync_timestamp=1636714562364&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fmarkdown-it-table-of-contents%2Fdownload%2Fmarkdown-it-table-of-contents-0.4.4.tgz"
   "version" "0.4.4"
+
+"markdown-it-texmath@^1.0.0":
+  "integrity" "sha512-4hhkiX8/gus+6e53PLCUmUrsa6ZWGgJW2XCW6O0ASvZUiezIK900ZicinTDtG3kAO2kon7oUA/ReWmpW2FByxg=="
+  "resolved" "https://registry.npmmirror.com/markdown-it-texmath/-/markdown-it-texmath-1.0.0.tgz"
+  "version" "1.0.0"
 
 "markdown-it@*", "markdown-it@^8.4.1", "markdown-it@>=5.0.0":
   "integrity" "sha1-OG+YmY3BWjdyKqdyIIT0Agvdm1Q="

@@ -37,6 +37,8 @@
     "yamljs": "0.3.0"
   },
   "dependencies": {
+    "katex": "^0.16.9",
+    "markdown-it-texmath": "^1.0.0",
     "vue-server-renderer": "^2.6.14"
   }
 }
