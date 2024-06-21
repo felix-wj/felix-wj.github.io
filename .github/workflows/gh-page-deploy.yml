@@ -9,7 +9,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-
+    # 设置镜像
+    - name: Set npm registry
+      run: npm config set registry https://npm.aliyun.com/
     - name: Build and Deploy
       uses: jenkey2011/vuepress-deploy@master
       env:
