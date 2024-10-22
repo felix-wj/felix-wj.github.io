@@ -8,7 +8,7 @@ module.exports = [
       {text:'MySQL',link:'/note/mysql/'},
       {text:'Java',link:'/note/java/'},
       {text:'Linux',link:'/note/linux/'},
-      {text:'前端',link:'/note/front/'},
+      {text:'前端',link:'/note/web/'},
       {text:'算法',link:'/note/algorithm/'},
       {text:'设计模式',link:'/note/design/pattern/'},
     ]
