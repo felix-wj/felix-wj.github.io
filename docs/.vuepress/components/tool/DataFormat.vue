@@ -34,17 +34,19 @@
             <el-input style="margin-bottom: 10px;" type="textarea" :rows="10" placeholder="转换结果" v-model="targetText">
             </el-input>
             <el-row style="display: flex;">
-                <el-button size="medium" plain style="margin-right: 10px;" @click="tailDel">行尾删除</el-button>
+                <el-button size="medium" plain style="margin-right: 5px;" @click="wrapWithBrackets">括号包裹</el-button>
+                <el-button size="medium" plain style="margin-right: 5px;" @click="tailSemicolon">行尾分号</el-button>
+                <el-button size="medium" plain style="margin-right: 5px;" @click="tailDel">行尾删除</el-button>
                 <div style="display: flex;" @mouseover="showInputPerNumFocus" @mouseleave="hideInput">
                     <transition name="fade">
-                        <div style="display: flex; align-items: center; margin-right: 10px;" v-if="showInputPerNum">
+                        <div style="display: flex; align-items: center; margin-left: 5px;" v-if="showInputPerNum">
 
-                            每行数量：<el-input size="medium" style="width: 80px;" v-model="inputPerNum"
+                            每行数量：<el-input size="medium" style="width: 80px; margin-right: 5px;" v-model="inputPerNum"
                                 placeholder="每行数量"></el-input>
                         </div>
                     </transition>
 
-                    <el-button size="medium" plain @click="groupItems">分组</el-button>
+                    <el-button size="medium" style="margin-left: 5px;" plain @click="groupItems">分组</el-button>
 
                 </div>
 
@@ -116,20 +118,29 @@ export default {
             }
             this.targetText = result + '\n';
         },
+        tailSemicolon() {
+            //每行末尾加一个分号
+            this.targetText = this.targetText.replace(/\n/g, ';\n');
+        },
+        wrapWithBrackets() {
+            //每行包裹括号
+            this.targetText = this.targetText.replace(/(.+)/g, "($1)\n");
+        },
         tailDel() {
             //每行删除一个字符
             this.targetText = this.targetText.replace(/.\n/g, '\n');
 
         }
 
+
     }
 }
 </script>
 <style>
 .fade-enter-active, .fade-leave-active {
-    transition: opacity 2s;
+    transition: opacity 1.5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
-    opacity: 0;
+    opacity: 0.5;
 }
 </style>
