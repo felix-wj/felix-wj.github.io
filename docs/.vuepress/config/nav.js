@@ -7,7 +7,7 @@ module.exports = [
       {text:'Spring',link:'/note/spring/'},
       {text:'MySQL',link:'/note/mysql/'},
       {text:'Java',link:'/note/java/'},
-      {text:'Linux',link:'/note/linux/'},
+      {text:'服务器运维',link:'/note/linux/'},
       {text:'前端',link:'/note/web/'},
       {text:'算法',link:'/note/algorithm/'},
       {text:'设计模式',link:'/note/design/pattern/'},
