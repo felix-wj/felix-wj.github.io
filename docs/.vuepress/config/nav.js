@@ -16,8 +16,9 @@ module.exports = [
   {
     text: 'Tool', items: [
       { text: 'MyBatis Log 转SQL', link: '/pages/e7ab16/' },
+      { text: '数据列转行工具', link: '/pages/data-formate-tool/' },
       { text: 'Git Tips', link: 'https://wangchujiang.com/git-tips/' },
-      { text: '淘宝领券工具', link: '/tbk/' },
+  //    { text: '淘宝领券工具', link: '/tbk/' },
       { text: 'Markdown语法指南', link: 'https://www.markdown.xyz/basic-syntax/' },
       { text: 'GitHub Emoji Picker', link: 'https://github-emoji-picker.rickstaa.dev/' },
       { text: 'Markdown代码块语言清单', link: 'https://www.iszy.cc/posts/15/' },
