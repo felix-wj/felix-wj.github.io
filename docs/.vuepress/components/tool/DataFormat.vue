@@ -13,6 +13,8 @@
                 <el-row>
                     <el-button size="medium" plain @click="appendComma">行尾逗号</el-button>
                     <el-divider direction="vertical"></el-divider>
+                    <el-button size="medium" plain @click="appendSpace">行尾空格</el-button>
+                    <el-divider direction="vertical"></el-divider>
                     <el-button size="medium" plain @click="wrapWithQuotes">引号包裹</el-button>
                 </el-row>
                 <el-divider>转换</el-divider>
@@ -34,6 +36,7 @@
             <el-input style="margin-bottom: 10px;" type="textarea" :rows="10" placeholder="转换结果" v-model="targetText">
             </el-input>
             <el-row style="display: flex;">
+                <el-button size="medium" plain style="margin-right: 5px;" @click="copy">复制</el-button>
                 <el-button size="medium" plain style="margin-right: 5px;" @click="wrapWithBrackets">括号包裹</el-button>
                 <el-button size="medium" plain style="margin-right: 5px;" @click="tailSemicolon">行尾分号</el-button>
                 <el-button size="medium" plain style="margin-right: 5px;" @click="tailDel">行尾删除</el-button>
@@ -77,6 +80,10 @@ export default {
             this.backup();
             this.originText = this.originText.replace(/\n/g, ',\n');
         },
+        appendSpace() {
+            this.backup();
+            this.originText = this.originText.replace(/\n/g, ' \n');
+        },
         wrapWithQuotes() {
             this.backup();
             this.originText = this.originText.replace(/(.+)/g, "'$1'");
@@ -117,6 +124,16 @@ export default {
                 result += arr[i];
             }
             this.targetText = result + '\n';
+        },
+        copy() {
+            this.$copyText(this.targetText).then(() => {
+                this.$message({
+                    message: '复制成功',
+                    type: 'success'
+                });
+            }, () => {
+                this.$message.error('复制失败');
+            });
         },
         tailSemicolon() {
             //每行末尾加一个分号

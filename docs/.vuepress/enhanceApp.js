@@ -1,6 +1,7 @@
 import ElementUI from 'element-ui';
 import VueResource from 'vue-resource';
 import 'element-ui/lib/theme-chalk/index.css';
+import VueClipboard from 'vue-clipboard2'
 
 export default async ({
   Vue, // VuePress 正在使用的 Vue 构造函数
@@ -10,7 +11,9 @@ export default async ({
 }) => {
   if (typeof process === 'undefined') {
     Vue.use(ElementUI)
-    Vue.use(VueResource)  }
+    Vue.use(VueResource) 
+    Vue.use(VueClipboard )
+  }
   
 }
 
