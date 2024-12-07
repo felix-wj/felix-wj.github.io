@@ -15,7 +15,9 @@
                     <el-divider direction="vertical"></el-divider>
                     <el-button size="medium" plain @click="appendSpace">行尾空格</el-button>
                     <el-divider direction="vertical"></el-divider>
-                    <el-button size="medium" plain @click="wrapWithQuotes">引号包裹</el-button>
+                    <el-button size="medium" plain @click="wrapWithQuotes">引号包裹</el-button>       
+                    <el-divider direction="vertical"></el-divider>
+                    <el-button size="medium" plain @click="deduplication">去重</el-button>
                 </el-row>
                 <el-divider>转换</el-divider>
                 <el-button size="medium" plain @click="transposeColumnsToRows">列转行</el-button>
@@ -87,6 +89,12 @@ export default {
         wrapWithQuotes() {
             this.backup();
             this.originText = this.originText.replace(/(.+)/g, "'$1'");
+        },
+        deduplication() {
+            this.backup();
+            let arr = this.originText.split('\n');
+            let set = new Set(arr);
+            this.originText = Array.from(set).join('\n');
         },
         transposeColumnsToRows() {
             this.backup();
